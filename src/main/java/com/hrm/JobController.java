@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @CrossOrigin
 @Controller
-@RequestMapping(path = "/apply")
+@RequestMapping(path = "/job")
 public class JobController {
 	@Autowired
 	JobRepository jobItemsRepo;
@@ -28,7 +28,7 @@ public class JobController {
     }
 	
 	
-	@RequestMapping("/job")
+	@RequestMapping("/apply")
     public String getData(Model model) {
         List<JobItems> items = jobItemsRepo.findAll();
         model.addAttribute("items", items);
