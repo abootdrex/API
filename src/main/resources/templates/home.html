@@ -10,7 +10,15 @@
         href="https://i.postimg.cc/x1f905XN/hrm-logo-hrm-letter-hrm-letter-logo-design-initials-hrm-logo-linked-with-circle-and-uppercase-monogr.jpg">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
 </head>
-
+<style>
+	
+		.navbar-scrolled {
+			background-color: #333;
+			/* Change background color on scroll */
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+			/* Optional: Add shadow */
+		}
+</style>
 <body>
 <nav id="navbar" class="fixed top-0 left-0 w-full bg-gray-800 text-white py-2 transition-all duration-300">
 		<div class="container mx-auto flex justify-between items-center">
@@ -236,7 +244,23 @@
             </ul>
         </div>
     </footer>
+<script>
+		let lastScrollTop = 0;
+		const navbar = document.getElementById('navbar');
 
+		window.addEventListener('scroll', function () {
+			let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+			if (scrollTop > lastScrollTop) {
+				// Scroll down
+				navbar.style.transform = 'translateY(-100%)';
+			} else {
+				// Scroll up
+				navbar.style.transform = 'translateY(0)';
+			}
+			lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+		});
+
+	</script>
 </body>
 
 </html>
