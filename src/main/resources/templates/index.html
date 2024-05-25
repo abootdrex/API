@@ -68,26 +68,30 @@
 		.endpoint p {
 			margin-top: 0.5rem;
 		}
+		.navbar-scrolled {
+			background-color: #333;
+			/* Change background color on scroll */
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+			/* Optional: Add shadow */
+		}
 	</style>
 </head>
 
 <body>
-	   <nav id="navbar" class="fixed top-0 left-0 w-full bg-gray-800 text-white py-2 transition-all duration-300">
-		<div class="container mx-auto flex justify-between items-center">
-			<div class="logo">
-				<a href="/"><img class="w-12 h-10" style="mix-blend-mode: color-dodge; user-select: none;" alt="Logo"
-						src="https://i.postimg.cc/g2FN87Xx/hrm-logo-hrm-letter-hrm-letter-logo-design-initials-hrm-logo-linked-with-circle-and-uppercase-monogr.jpg" />
-				</a>
-			</div>
-			<ul class="flex space-x-4 ">
-				<li><a href="/job/apply" class="no-underline">Jobs </a></li>
-
-				<li><a href="/" class="no-underline">
-						API Documentation
-					</a></li>
-			</ul>
-		</div>
+<nav id="navbar" class="fixed top-0 left-0 w-full bg-gray-800 text-white py-2 transition-all duration-300">
+<div class="container mx-auto flex justify-between items-center">
+<div class="logo">
+	<a href="/">
+		<img class="w-12 h-10" style="mix-blend-mode: color-dodge; user-select: none;" alt="Logo"src="https://i.postimg.cc/g2FN87Xx/hrm-logo-hrm-letter-hrm-letter-logo-design-initials-hrm-logo-linked-with-circle-and-uppercase-monogr.jpg" />
+	</a>
+	</div>
+	<ul class="flex space-x-4 ">
+	<li><a href="/job/apply" class="no-underline">Jobs </a></li>
+		<li><a href="/" class="no-underline">API Documentation</a></li>
+	</ul>
+	</div>
 	</nav>
+
     <br/>
     <br/>
 	<div class="container mt-8">
@@ -202,6 +206,23 @@ phone,
             </ul>
         </div>
     </footer>
+	<script>
+		let lastScrollTop = 0;
+		const navbar = document.getElementById('navbar');
+
+		window.addEventListener('scroll', function () {
+			let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+			if (scrollTop > lastScrollTop) {
+				// Scroll down
+				navbar.style.transform = 'translateY(-100%)';
+			} else {
+				// Scroll up
+				navbar.style.transform = 'translateY(0)';
+			}
+			lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+		});
+
+	</script>
 </body>
 
 </html>
