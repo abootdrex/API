@@ -72,29 +72,22 @@
 </head>
 
 <body>
-	    <nav class="bg-gray-800 px-4 ">
-        <div class="bg-gray-800 fixed top-0 start-0 z-50 flex justify-between px-3 w-full" id="sticky-banner">
-            <ul class="flex space-x-4 sm:mt-0">
-                <li><a href="/"
-                        class="relative top-1 inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-white rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
-                        <span
-                            class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-gray-800 dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">The
-                            HRM</span>
-                    </a></li>
-                <li><a href="/job/form"
-                        class="relative top-1 start-10 inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-white rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800">
-                        <span
-                            class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-gray-800 dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">Post
-                            Job</span>
-                    </a></li>
-                <li>
-                    <img class="h-12 rounded-md" style="mix-blend-mode: color-dodge; user-select: none;" alt="Logo"
-                        src="https://i.postimg.cc/g2FN87Xx/hrm-logo-hrm-letter-hrm-letter-logo-design-initials-hrm-logo-linked-with-circle-and-uppercase-monogr.jpg" />
-                </li>
-            </ul>
+	   <nav id="navbar" class="fixed top-0 left-0 w-full bg-gray-800 text-white py-2 transition-all duration-300">
+		<div class="container mx-auto flex justify-between items-center">
+			<div class="logo">
+				<a href="/"><img class="w-12 h-10" style="mix-blend-mode: color-dodge; user-select: none;" alt="Logo"
+						src="https://i.postimg.cc/g2FN87Xx/hrm-logo-hrm-letter-hrm-letter-logo-design-initials-hrm-logo-linked-with-circle-and-uppercase-monogr.jpg" />
+				</a>
+			</div>
+			<ul class="flex space-x-4 ">
+				<li><a href="/job/apply" class="no-underline">Jobs </a></li>
 
-        </div>
-    </nav>
+				<li><a href="/" class="no-underline">
+						API Documentation
+					</a></li>
+			</ul>
+		</div>
+	</nav>
     <br/>
     <br/>
 	<div class="container mt-8">
