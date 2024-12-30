@@ -31,11 +31,11 @@ public class UserController {
 		return "contact";
 	}
 
-	@GetMapping("/out")
+	@GetMapping("/home")
 	public String showCheckout(  Model model) {
 	 
  
-		return "out";
+		return "home";
 	}
 
 	@GetMapping("/signup")
