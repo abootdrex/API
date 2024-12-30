@@ -27,7 +27,6 @@ public class JobController {
         return "form";
     }
 	
-	
 	@RequestMapping("/apply")
     public String getData(Model model) {
         List<JobItems> items = jobItemsRepo.findAll();
