@@ -62,10 +62,4 @@ public class UserController {
 		return "aboutme";		
 	}
 	
-	@GetMapping("/intern")
-	public String home( Model model) {
-		 																									// name
-				 
-		return "intern";
-	}
 }
