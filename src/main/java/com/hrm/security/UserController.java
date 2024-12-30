@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class UserController {
 	 
 
-	@GetMapping("/intern")
+	@GetMapping("/")
 	public String newe(  Model model) {
 		return "newe";
 	}
@@ -62,7 +62,7 @@ public class UserController {
 		return "aboutme";		
 	}
 	
-	@GetMapping("/")
+	@GetMapping("/intern")
 	public String home( Model model) {
 		 																									// name
 				 
