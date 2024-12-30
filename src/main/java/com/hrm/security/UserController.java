@@ -18,6 +18,12 @@ public class UserController {
 		return "newe";
 	}
 
+	@GetMapping("/internship")
+	public String nIntern(Model model){
+
+		return "/intern";
+	}
+
 	@GetMapping("/contact")
 	public String contact( Model model) {
 	 
